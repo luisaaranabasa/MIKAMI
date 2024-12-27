@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Renner*';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Renner*'), url('https://fonts.cdnfonts.com/s/19628/Renner_ 400 Book.woff') format('woff');
+}
+
+@font-face {
+    font-family:"Benzin-medium" ;
+    src: url(../css/fonts/benzin-medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family:"RennerBold" ;
+    src: url(../css/fonts/renner_bold.otf) format('truetype');
+}
+
+@font-face {
+    font-family:"RennerItalic" ;
+    src: url(../css/fonts/renner_book\ italic.otf) format('truetype');
+}
+
+header,body {
+    background-color: #efefef;
+    font-family: 'Renner*';
+    color: #0a2652;
+}
+
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative
+}
+.container-fluid {
+    justify-content: space-between;
+}
+
+.menu_secciones {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1111;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-nav a {
+    color: #0a2652;
+}
+
+.navMenu{
+    width: 100%;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    background: rgba(38, 91, 137, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px rgba(209, 213, 219, 0.3);
+    border-radius: 40px;
+}
+
+.lista {
+    position: relative;
+    display: inline-block;
+}
+
+.lista::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.08em;
+    background-color: #0a2652;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.lista:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.lista:not(:hover)::after {
+    transform-origin: right;
+}
+
+#principio_pag {
+    z-index: 0;
+}
+
+.seccion_intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #0a2652;
+    padding: 20px;
+    max-width: 100%;
+    background: linear-gradient(to bottom, #efefef,#265B89);
+    background-size: 200% 200%; /* Permite el movimiento */
+    -webkit-animation: gradientAnimation 16s ease infinite;
+    -moz-animation: gradientAnimation 16s ease infinite;
+    animation: gradientAnimation 16s ease infinite;
+}
+
+.seccion_intro h1 {
+    font-family: "Benzin-medium";
+    font-size: 6vh;
+}
+
+.seccion_intro h2 {
+    font-size: 3vh;
+}
+
+.seccion_intro p {
+    font-size: 2.5vh;
+}
+
+.italic {
+    font-family: "RennerItalic";
+}
+
+@-webkit-keyframes gradientAnimation {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+@-moz-keyframes gradientAnimation {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+/* Estilos generales para la sección */
+.section_auntentica {
+    position: relative;
+    overflow: hidden; /* Para evitar que el contenido se desborde */
+}
+
+/* Estilos para el contenedor principal */
+.autentica {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para el contenedor de contenido */
+.content-container {
+    max-width: 800px; /* Ancho máximo del contenido */
+}
+
+.text_autentica h2,
+.text_transforma h2 {
+    margin: 10px 0;
+    font-size: 3.5vh;
+    font-family: "RennerItalic";
+}
+
+.text_autentica h1 {
+    font-family: "Benzin-medium";
+    font-size: 5vh  ;
+}
+
+.text_autentica p,
+.text_transforma p {
+    margin: 10px 0; /* Espaciado entre los párrafos */
+    font-size: 2.5vh;
+}
+
+/* Estilos para el botón */
+.btn-transform {
+    margin-top: 20px; /* Espaciado superior para el botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.btn-transform:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
