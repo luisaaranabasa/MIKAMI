@@ -182,76 +182,190 @@ header,body {
     }
 }
 
-/* Estilos generales para la sección */
-.section_auntentica {
+.section_autentica {
     position: relative;
-    overflow: hidden; /* Para evitar que el contenido se desborde */
-}
+    overflow: hidden;
+  }
+  
 
-/* Estilos para el contenedor principal */
 .autentica {
     display: flex;
-    flex-direction: column; /* Apila los elementos verticalmente */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    height: 100vh; /* Altura completa de la ventana */
-    text-align: center; /* Centra el texto */
-    padding: 20px; /* Espaciado interno */
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 2em;
+}
+  
+.iceberg-context {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em; /* Espaciado entre la imagen y el texto */
+    flex-wrap: wrap; /* Acomoda contenido en pantallas pequeñas */
+}
+  
+
+.image-container {
+    flex: 1 1 40%;
+    text-align: center;
+}
+  
+.image-container img {
+    max-width: 85%;
+    height: auto;
+    padding-top: 1em;
 }
 
-/* Estilos para el contenedor de contenido */
-.content-container {
-    max-width: 800px; /* Ancho máximo del contenido */
+.text-container {
+    flex: 1 1 55%; 
+    text-align: right;
 }
-
-.text_autentica h2 {
-    margin: 0.3em;
-    font-size: 3.5vh;
-    font-family: "Benzin-medium";
-}
-
-.text_transforma h4 {
-    margin: 0.3em;
-    font-size: 2.8vh;
-    font-family: "RennerBold";
-}
-
+  
 .text_autentica h1 {
     font-family: "Benzin-semibold";
-    font-size: 5vh  ;
+    font-size: 5vh;
+    margin-bottom: 1vh;
 }
-
-.text_autentica p,
+  
+.text_autentica h2 {
+    font-family: "Benzin-medium";
+    font-size: 3.5vh;
+    margin-bottom: 1em;
+}
+  
+.text_autentica p {
+    font-size: 2.5vh;
+    line-height: 1.6;
+    margin-bottom: 2em;
+}
+  
+.text_transforma h4 {
+    font-family: "RennerBold";
+    font-size: 2.8vh;
+    margin-bottom: 1em;
+}
+  
 .text_transforma p {
-    margin: 1.6em 0; /* Espaciado entre los párrafos */
     font-size: 2.5vh;
+    line-height: 1.6;
+    margin-bottom: 2em;
 }
-
-/* Contenedor para el botón */
+  
 .button-container {
-    display: flex; /* Para centrar el botón */
-    justify-content: center;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho necesario */
+    text-align: right;
 }
-
-/* Asegúrate de que el botón no sea afectado por flexbox */
+  
 .btn-transform {
-    margin-top: 20px; /* Espaciado superior para el botón */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    font-size: 16px; /* Tamaño de fuente del botón */
-    background-color: #265B89; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
-    transition: font-size 0.3s;
-    display: inline-block; /* Ajusta el ancho al contenido */
-    white-space: nowrap; /* Evita saltos de línea */
-    width: auto; /* Asegura que el botón no se estire */
+    padding: 1em 2em;
+    font-size: 2vh;
+    background-color: #265B89;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s, font-size 0.3s;
+}
+  
+.btn-transform:hover {
+    background-color: #0a2652;
+    font-size: 2.2vh;
 }
 
-.btn-transform:hover {
-    background-color: #0a2652; /* Color de fondo al pasar el mouse */
-    font-size: 2.5vh;
+/* FOOTER */
+
+footer {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
+
+footer .social_icon,
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .social_icon li,
+footer .menu li {
+    list-style: none;
+}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #898e7d;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a:hover {
+    transform: translateY(-15px);
+    color: #a0463e;
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #898e7d;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+    color: #a0463e;
+}
+
+footer p {
+    color: #898e7d;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+@media (max-width: 768px) {
+    .iceberg-context {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-container,
+    .text-container {
+      flex: 1 1 100%;
+      text-align: center; /* Centra contenido para pantallas pequeñas */
+    }
+  
+    .text-container {
+      text-align: center; /* Alinea texto al centro */
+    }
+
+    .seccion_intro h1 {
+        font-size: 3.2vh;
+    }
+
+    .seccion_intro p {
+        font-size: 2vh;
+    }
+
+    .seccion_intro h2 {
+        font-size: 2vh;
+    }
+
+    .section_autentica {
+        padding: 1em;
+    }
+}
+  
