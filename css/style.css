@@ -38,13 +38,15 @@ header,body {
 }
 
 
+/* Estilos generales existentes */
 .parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative
+    position: relative;
 }
+
 .container-fluid {
     justify-content: space-between;
 }
@@ -57,6 +59,7 @@ header,body {
 .navbar {
     position: fixed;
     z-index: 1111;
+    width: 100%;
 }
 
 .navbar-nav {
@@ -65,13 +68,15 @@ header,body {
 
 .navbar-nav a {
     color: #0a2652;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.navMenu{
+.navMenu {
     width: 100%;
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;   
@@ -81,6 +86,7 @@ header,body {
     border: 1.5px rgba(209, 213, 219, 0.3);
     border-radius: 40px;
 }
+
 
 .lista {
     position: relative;
@@ -112,6 +118,49 @@ header,body {
 #principio_pag {
     z-index: 0;
 }
+
+/* Estilos para menú responsive */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none; /* Oculta los ítems del menú */
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Debajo del menú principal */
+        left: 0;
+        right: 0;
+        background-color: rgba(38, 91, 137, 0.9); /* Fondo oscuro */
+        padding: 1em;
+        z-index: 1112;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .menu-items.active {
+        display: flex; /* Muestra el menú desplegable */
+    }
+
+    .menu-items .nav-link {
+        color: white; /* Color de los enlaces en móvil */
+        padding: 0.5em 0;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .menu-items .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Efecto hover */
+        border-radius: 5px;
+    }
+
+    /* Oculta los ítems principales del menú y muestra el botón */
+    .menu img[alt="Comillas"] {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
 
 .seccion_intro {
     display: flex;
@@ -271,10 +320,110 @@ header,body {
     font-size: 2.2vh;
 }
 
+/* SOBRE MI */
+
+.section_aboutme {
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 2em;
+}
+
+
+.img-fluid {
+    flex: 1 1 40%;
+    text-align: center;
+    max-width: 80%; /* Ajusta al porcentaje deseado, como 30% o 40% */
+    height: auto;
+    display: inline-block; /* Mantiene la imagen centrada dentro de su contenedor */
+    margin: 0 auto;
+    padding-top: 1em;
+}
+  
+
+.text-container {
+    flex: 1 1 55%; 
+    text-align: right;
+}
+
+.text_aboutme h1 {
+    font-family: "Benzin-semibold";
+    font-size: 5vh;
+}
+
+.text_aboutme h2 {
+    font-family: "Benzin-medium";
+    font-size: 3.5vh;
+}
+  
+.text_aboutme p {
+    font-size: 2.5vh;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.text_aboutme a {
+    font-family: "RennerBold";
+}
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body h5 {
+    text-align: center;
+}
+
+.custom-card {
+    background-color: #265B89;
+    color: white;
+    border: none;
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para hacer más grande la card */
+.custom-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+.custom-card-title {
+    color: #ffffff;
+}
+
+.text-center h1 {
+    font-family: "Benzin-semibold";
+}
+
+.text-center p{
+    font-size: 2.5vh;
+}
+.text-center a{
+    font-family: "RennerBold";
+}
+
+.custom-text-container {
+    padding-top: 1rem; /* Menos padding en la parte superior */
+}
+
+.custom-paragraph {
+    width: 100%;
+}
+
 /* FOOTER */
 
 footer {
-    position: relative;
+    position: absolute;
     width: 100%;
     min-height: 100px;
     display: flex;
@@ -285,46 +434,31 @@ footer {
     margin-bottom: 3vh;
 }
 
-footer .social_icon,
 footer .menu {
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
-
-footer .social_icon li,
-footer .menu li {
+    gap: 20px; /* Espaciado entre elementos */
+    padding: 0 20px; /* Margen interno a los lados */
+    margin: 0;
     list-style: none;
 }
 
-footer .social_icon li a {
-    font-size: 2em;
-    color: #898e7d;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-}
-
-footer .social_icon li a:hover {
-    transform: translateY(-15px);
-    color: #a0463e;
+footer .menu li {
+    margin: 0; /* Evita márgenes no deseados */
 }
 
 footer .menu li a {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #898e7d;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
     text-decoration: none;
     opacity: 0.75;
+    transition: 0.5s;
+    padding: 5px 10px; /* Añade un poco de espacio alrededor del texto */
 }
 
 footer .menu li a:hover {
     opacity: 1;
-    color: #a0463e;
+    color: #0a2652;
 }
 
 footer p {
@@ -367,5 +501,39 @@ footer p {
     .section_autentica {
         padding: 1em;
     }
+
+    .section_aboutme {
+        padding: 1em; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .row.align-items-center {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    }
+
+    .col-md-6 {
+        flex: 1 1 100%; /* Asegura que las columnas ocupen todo el ancho */
+        text-align: left; /* Centra contenido */
+        margin-bottom: 1em; /* Añade espacio entre bloques */
+    }
+
+    .img-fluid {
+        max-width: 80%; /* Ajusta el tamaño máximo de la imagen */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    .text_aboutme h1 {
+        font-size: 4vh; /* Ajusta el tamaño del título principal */
+    }
+
+    .text_aboutme h2 {
+        font-size: 3vh; /* Ajusta el tamaño del subtítulo */
+    }
+
+    .text_aboutme p {
+        font-size: 2vh; /* Reduce el tamaño del texto */
+        line-height: 1.5; /* Mantén buena legibilidad */
+    }
 }
+
+
   
