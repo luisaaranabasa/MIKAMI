@@ -2,7 +2,7 @@
     font-family: 'Renner*';
     font-style: normal;
     font-weight: 400;
-    src: local('Renner*'), url('https://fonts.cdnfonts.com/s/19628/Renner_ 400 Book.woff') format('woff');
+    src: local('Renner*'), url('https://fonts.cdnfonts.com/s/19628/Renner_400_Book.woff') format('woff');
 }
 
 @font-face {
@@ -30,13 +30,11 @@
     src: url(../css/fonts/benzin-semibold.ttf) format('truetype');
 }
 
-
-header,body {
+header, body {
     background-color: #efefef;
     font-family: 'Renner*';
     color: #0a2652;
 }
-
 
 /* Estilos generales existentes */
 .parallax {
@@ -86,7 +84,6 @@ header,body {
     border: 1.5px rgba(209, 213, 219, 0.3);
     border-radius: 40px;
 }
-
 
 .lista {
     position: relative;
@@ -161,7 +158,7 @@ header,body {
     }
 }
 
-
+/* SECCION INTRO */
 .seccion_intro {
     display: flex;
     justify-content: center;
@@ -231,11 +228,11 @@ header,body {
     }
 }
 
+/* SECCION AUTENTICA */
 .section_autentica {
     position: relative;
     overflow: hidden;
-  }
-  
+}
 
 .autentica {
     display: flex;
@@ -244,7 +241,7 @@ header,body {
     height: 100vh;
     padding: 2em;
 }
-  
+
 .iceberg-context {
     display: flex;
     justify-content: space-between;
@@ -252,13 +249,12 @@ header,body {
     gap: 2em; /* Espaciado entre la imagen y el texto */
     flex-wrap: wrap; /* Acomoda contenido en pantallas pequeñas */
 }
-  
 
 .image-container {
     flex: 1 1 40%;
     text-align: center;
 }
-  
+
 .image-container img {
     max-width: 85%;
     height: auto;
@@ -269,41 +265,41 @@ header,body {
     flex: 1 1 55%; 
     text-align: right;
 }
-  
+
 .text_autentica h1 {
     font-family: "Benzin-semibold";
     font-size: 5vh;
     margin-bottom: 1vh;
 }
-  
+
 .text_autentica h2 {
     font-family: "Benzin-medium";
     font-size: 3.5vh;
     margin-bottom: 1em;
 }
-  
+
 .text_autentica p {
     font-size: 2.5vh;
     line-height: 1.6;
     margin-bottom: 2em;
 }
-  
+
 .text_transforma h4 {
     font-family: "RennerBold";
     font-size: 2.8vh;
     margin-bottom: 1em;
 }
-  
+
 .text_transforma p {
     font-size: 2.5vh;
     line-height: 1.6;
     margin-bottom: 2em;
 }
-  
+
 .button-container {
     text-align: right;
 }
-  
+
 .btn-transform {
     padding: 1em 2em;
     font-size: 2vh;
@@ -314,19 +310,17 @@ header,body {
     cursor: pointer;
     transition: background-color 0.3s, font-size 0.3s;
 }
-  
+
 .btn-transform:hover {
     background-color: #0a2652;
     font-size: 2.2vh;
 }
 
 /* SOBRE MI */
-
 .section_aboutme {
     position: relative;
     overflow: hidden;
-  }
-  
+}
 
 .aboutme {
     display: flex;
@@ -336,17 +330,15 @@ header,body {
     padding: 2em;
 }
 
-
 .img-fluid {
     flex: 1 1 40%;
     text-align: center;
-    max-width: 80%; /* Ajusta al porcentaje deseado, como 30% o 40% */
+    max-width: 80%;
     height: auto;
-    display: inline-block; /* Mantiene la imagen centrada dentro de su contenedor */
+    display: inline-block;
     margin: 0 auto;
     padding-top: 1em;
 }
-  
 
 .text-container {
     flex: 1 1 55%; 
@@ -362,7 +354,7 @@ header,body {
     font-family: "Benzin-medium";
     font-size: 3.5vh;
 }
-  
+
 .text_aboutme p {
     font-size: 2.5vh;
     line-height: 1.6;
@@ -372,6 +364,7 @@ header,body {
 .text_aboutme a {
     font-family: "RennerBold";
 }
+
 .row {
     display: flex;
     align-items: center;
@@ -389,12 +382,11 @@ header,body {
     background-color: #265B89;
     color: white;
     border: none;
-    transition: transform 0.3s ease; /* Transición suave */
+    transition: transform 0.3s ease;
 }
 
-/* Efecto hover para hacer más grande la card */
 .custom-card:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    transform: scale(1.05);
 }
 
 .custom-card-title {
@@ -405,23 +397,74 @@ header,body {
     font-family: "Benzin-semibold";
 }
 
-.text-center p{
+.text-center p {
     font-size: 2.5vh;
 }
-.text-center a{
+
+.text-center a {
     font-family: "RennerBold";
 }
 
+.text-center.mb-5 {
+    margin-bottom: 0.5rem;
+}
+
+.container.py-5 {
+    padding-top: 21em;
+}
+
 .custom-text-container {
-    padding-top: 1rem; /* Menos padding en la parte superior */
+    padding-top: 1rem;
 }
 
 .custom-paragraph {
     width: 100%;
 }
 
-/* FOOTER */
+/* metodologia */
 
+/* Estilos para los primeros tres cards con fondo azul y texto blanco */
+.page-mikami .card-custom-azul {
+    background-color: #0a2652; /* Fondo azul */
+    color: #efefef; /* Texto blanco */
+    border: 2px solid #0a2652; /* Bordes azules */
+}
+
+/* Estilos para los siguientes tres cards con fondo blanco y texto azul */
+.page-mikami .card-custom-blanco {
+    background-color: #efefef; /* Fondo blanco */
+    color: #0a2652; /* Texto azul */
+    border: 2px solid #0a2652; /* Bordes azules */
+}
+
+
+.page-mikami .navbar {
+    position: static !important;  /* Elimina cualquier propiedad de posicionamiento fijo */
+}
+
+.page-mikami p {
+    font-size: 2.5vh;
+}
+
+.page-mikami h2 {
+    font-family: "Benzin-medium";
+    font-size: 3vh;
+}
+.page-mikami h5 {
+    font-family: "Benzin-medium";
+    font-size: 3vh;
+}
+
+.page-mikami h4 {
+    font-size: 2.5vh;
+    color: #0a2652;
+}
+.page-mikami .text-center a {
+    font-family: "RennerBold";
+    font-size: 2.5vh;
+}
+
+/* FOOTER */
 footer {
     position: absolute;
     width: 100%;
@@ -437,14 +480,14 @@ footer {
 footer .menu {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaciado entre elementos */
-    padding: 0 20px; /* Margen interno a los lados */
+    gap: 20px;
+    padding: 0 20px;
     margin: 0;
     list-style: none;
 }
 
 footer .menu li {
-    margin: 0; /* Evita márgenes no deseados */
+    margin: 0;
 }
 
 footer .menu li a {
@@ -453,7 +496,7 @@ footer .menu li a {
     text-decoration: none;
     opacity: 0.75;
     transition: 0.5s;
-    padding: 5px 10px; /* Añade un poco de espacio alrededor del texto */
+    padding: 5px 10px;
 }
 
 footer .menu li a:hover {
@@ -469,21 +512,16 @@ footer p {
     font-size: 1.1em;
 }
 
-
 @media (max-width: 768px) {
     .iceberg-context {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .image-container,
     .text-container {
-      flex: 1 1 100%;
-      text-align: center; /* Centra contenido para pantallas pequeñas */
-    }
-  
-    .text-container {
-      text-align: center; /* Alinea texto al centro */
+        flex: 1 1 100%;
+        text-align: center;
     }
 
     .seccion_intro h1 {
@@ -503,37 +541,34 @@ footer p {
     }
 
     .section_aboutme {
-        padding: 1em; /* Reduce el padding para pantallas pequeñas */
+        padding: 1em;
     }
 
     .row.align-items-center {
-        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        flex-direction: column;
     }
 
     .col-md-6 {
-        flex: 1 1 100%; /* Asegura que las columnas ocupen todo el ancho */
-        text-align: left; /* Centra contenido */
-        margin-bottom: 1em; /* Añade espacio entre bloques */
+        flex: 1 1 100%;
+        text-align: left;
+        margin-bottom: 1em;
     }
 
     .img-fluid {
-        max-width: 80%; /* Ajusta el tamaño máximo de la imagen */
-        margin: 0 auto; /* Centra la imagen horizontalmente */
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .text_aboutme h1 {
-        font-size: 4vh; /* Ajusta el tamaño del título principal */
+        font-size: 4vh;
     }
 
     .text_aboutme h2 {
-        font-size: 3vh; /* Ajusta el tamaño del subtítulo */
+        font-size: 3vh;
     }
 
     .text_aboutme p {
-        font-size: 2vh; /* Reduce el tamaño del texto */
-        line-height: 1.5; /* Mantén buena legibilidad */
+        font-size: 2vh;
+        line-height: 1.5;
     }
 }
-
-
-  
