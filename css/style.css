@@ -464,6 +464,31 @@ header, body {
     font-size: 2.5vh;
 }
 
+.button-center {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente (si es necesario) */
+}
+
+.btn-transform {
+    padding: 1em 2em;
+    font-size: 2vh;
+    background-color: #265B89;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s, font-size 0.3s;
+    display: inline-block;
+}
+
+.btn-transform:hover {
+    background-color: #0a2652;
+    font-size: 2.2vh;
+    color: white;
+}
+
+
 /* FOOTER */
 footer {
     position: absolute;
