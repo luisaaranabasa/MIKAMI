@@ -185,7 +185,7 @@ header, body {
 }
 
 .seccion_intro p {
-    font-size: 2.5vh;
+    font-size: 3vh;
 }
 
 .italic {
@@ -274,12 +274,12 @@ header, body {
 
 .text_autentica h2 {
     font-family: "Benzin-medium";
-    font-size: 3.5vh;
+    font-size: 3h;
     margin-bottom: 1em;
 }
 
 .text_autentica p {
-    font-size: 2.5vh;
+    font-size: 3vh;
     line-height: 1.6;
     margin-bottom: 2em;
 }
@@ -291,7 +291,7 @@ header, body {
 }
 
 .text_transforma p {
-    font-size: 2.5vh;
+    font-size: 3vh;
     line-height: 1.6;
     margin-bottom: 2em;
 }
@@ -356,7 +356,7 @@ header, body {
 }
 
 .text_aboutme p {
-    font-size: 2.5vh;
+    font-size: 3vh;
     line-height: 1.6;
     margin-bottom: 1em;
 }
@@ -398,7 +398,7 @@ header, body {
 }
 
 .text-center p {
-    font-size: 2.5vh;
+    font-size: 3vh;
 }
 
 .text-center a {
@@ -436,6 +436,31 @@ header, body {
     color: #0a2652; /* Texto azul */
     border: 2px solid #0a2652; /* Bordes azules */
 }
+/* Estilos para los cards */
+.card-custom {
+    position: relative;
+    background-color: #0a2652; /* Fondo azul */
+    color: #efefef; /* Texto blanco */
+    border: 2px solid #0a2652; /* Bordes azules */
+    text-align: center; /* Centra el contenido */
+    padding: 1em; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que los elementos no se salgan del card */
+}
+
+/* Estilo para la imagen dentro del card */
+.card-custom img {
+    max-width: 100%; /* Imagen se adapta al ancho del card */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 1em; /* Espaciado debajo de la imagen */
+    border-radius: 10px; /* Opcional: Bordes redondeados */
+}
+
+/* Opcional: Estilo al pasar el mouse por el card */
+.card-custom:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    transition: transform 0.3s ease; /* Transición suave */
+}
 
 
 .page-mikami .navbar {
@@ -443,7 +468,7 @@ header, body {
 }
 
 .page-mikami p {
-    font-size: 2.5vh;
+    font-size: 3vh;
 }
 
 .page-mikami h2 {
@@ -456,12 +481,12 @@ header, body {
 }
 
 .page-mikami h4 {
-    font-size: 2.5vh;
+    font-size: 3vh;
     color: #0a2652;
 }
 .page-mikami .text-center a {
     font-family: "RennerBold";
-    font-size: 2.5vh;
+    font-size: 3vh;
 }
 
 .button-center {
