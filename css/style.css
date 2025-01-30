@@ -450,6 +450,21 @@ header, body {
     padding-top: 100px; /* Ajusta según la altura de la navbar */
 }
 
+/* 🔹 Modificación del botón sin perder la animación */
+.btn-destacado {
+    padding-top: 8px !important; /* Reduce el padding superior */
+    padding-bottom: 12px !important; /* Mantiene un buen espaciado inferior */
+    font-size: 1.4rem !important; /* Hace la letra más grande */
+    transition: all 0.3s ease-in-out; /* Mantiene la animación original */
+}
+
+/* 🔹 Efecto hover para que no pierda la animación */
+.btn-destacado:hover {
+    background-color: #0a2652; /* Mantiene el color original del hover */
+    font-size: 1.5rem !important; /* Opcional: hacer el texto aún más grande al pasar el mouse */
+}
+
+
 .page-mikami .button-center .btn-transform {
     font-family: "Renner*"; /* Usa Renner normal */
     font-weight: normal; /* Evita que sea bold */
