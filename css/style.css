@@ -159,74 +159,26 @@ header, body {
 }
 
 /* SECCION INTRO */
+/* 🔹 Ajusta la sección de introducción para que el video ocupe toda la pantalla */
 .seccion_intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    color: #0a2652;
-    padding: 20px;
-    max-width: 100%;
-    background: linear-gradient(to bottom, #efefef,#265B89);
-    background-size: 200% 200%; /* Permite el movimiento */
-    -webkit-animation: gradientAnimation 16s ease infinite;
-    -moz-animation: gradientAnimation 16s ease infinite;
-    animation: gradientAnimation 16s ease infinite;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    overflow: hidden;
 }
 
-.seccion_intro h1 {
-    font-family: "Benzin-medium";
-    font-size: 6vh;
+/* 🔹 Estiliza el video para que sea de fondo y cubra toda la sección */
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra el área sin distorsión */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Lo pone detrás de cualquier contenido */
 }
 
-.seccion_intro h2 {
-    font-size: 3vh;
-}
-
-.seccion_intro p {
-    font-size: 3vh;
-}
-
-.italic {
-    font-family: "RennerItalic";
-}
-
-@-webkit-keyframes gradientAnimation {
-    0% {
-        background-position: 50% 0%;
-    }
-    50% {
-        background-position: 50% 100%;
-    }
-    100% {
-        background-position: 50% 0%;
-    }
-}
-
-@-moz-keyframes gradientAnimation {
-    0% {
-        background-position: 50% 0%;
-    }
-    50% {
-        background-position: 50% 100%;
-    }
-    100% {
-        background-position: 50% 0%;
-    }
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 50% 0%;
-    }
-    50% {
-        background-position: 50% 100%;
-    }
-    100% {
-        background-position: 50% 0%;
-    }
-}
 
 /* SECCION AUTENTICA */
 .section_autentica {
@@ -274,12 +226,12 @@ header, body {
 
 .text_autentica h2 {
     font-family: "Benzin-medium";
-    font-size: 3h;
+    font-size: 3vh;
     margin-bottom: 1em;
 }
 
 .text_autentica p {
-    font-size: 3vh;
+    font-size: 2.8vh;
     line-height: 1.6;
     margin-bottom: 2em;
 }
@@ -368,6 +320,7 @@ header, body {
 .row {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .card-body {
@@ -421,7 +374,136 @@ header, body {
     width: 100%;
 }
 
+.about-page main {
+    padding-top: 100px; /* Ajusta según la altura de la navbar */
+}
+
+.page-mikami .button-center .btn-transform {
+    font-family: "Renner*"; /* Usa Renner normal */
+    font-weight: normal; /* Evita que sea bold */
+    font-size: 3vh !important; /* Forza el tamaño más pequeño */
+}
+
+/* 🔹 Mismo tamaño para todos los cards */
+.fixed-size {
+    width: 360px; /* Ancho ajustado a 360px */
+    height: 250px; /* Mantiene el alto fijo */
+}
+
+/* 🔹 Mantiene el tamaño del card SIEMPRE igual */
+.hover-card {
+    background-color: #265B89; /* Fondo azul oscuro */
+    color: white; /* Texto en blanco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    position: relative;
+    overflow: hidden; /* Evita que el contenido desborde */
+}
+
+/* 🔹 Se asegura de centrar la palabra clave inicial */
+.mi-text-hover {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: "Benzin-medium"; /* Fuente Benzin Medium */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 🔹 Oculta el contenido original por defecto */
+.hover-card .hidden-content-hover {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 🔹 Estilos de fuente */
+.hover-card .card-title {
+    color: white;
+    font-family: "Benzin-medium"; /* Fuente Benzin Medium */
+}
+
+.hover-card .card-text {
+    font-family: "Renner*"; /* Fuente Renner */
+    font-size: 1rem;
+}
+
+.section-title {
+    font-family: "Benzin-medium"; /* Aplica la fuente Benzin Medium */
+    font-size: 2rem; /* Ajusta el tamaño si es necesario */
+    font-weight: normal; /* Opcional: asegura que no se haga más grueso */
+    color: #0a2652; /* Ajusta el color si es necesario */
+    text-transform: uppercase; /* Si quieres que esté en mayúsculas */
+}
+
+.about-page .custom-text-container {
+    margin-top: -200px; /* Ajusta este valor para reducir el espacio */
+}
+
+/* 🔹 Aplica SOLO a los cards de la sección "RESULTADOS" */
+.text-center.mt-5 .row .card-custom-blanco {
+    width: 100%; /* Ocupa el ancho del contenedor */
+    min-height: 300px; /* Altura mínima */
+    max-height: 350px; /* Altura máxima */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaciado uniforme */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 🔹 Asegurar que las imágenes dentro de estos cards sean del mismo tamaño */
+.text-center.mt-5 .row .card-custom-blanco img {
+    width: 140px; /* Ajusta el tamaño según necesidad */
+    height: 140px; /* Para mantener coherencia en todas las imágenes */
+    object-fit: contain; /* Evita distorsiones */
+}
+
+/* 🔹 Ajustar los títulos dentro de los cards */
+.text-center.mt-5 .row .card-custom-blanco h4 {
+    font-size: 1.2rem; /* Tamaño del texto uniforme */
+    flex-grow: 1; /* Hace que todos los títulos tengan el mismo espacio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔹 Evitar que los cards cambien de tamaño debido a diferencias de contenido */
+.text-center.mt-5 .row .card-custom-blanco .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+/* 🔹 Mantiene el tamaño igual al hacer hover */
+@media (min-width: 992px) {
+    .hover-card:hover .mi-text-hover {
+        display: none;
+    }
+
+    .hover-card:hover .hidden-content-hover {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
 /* metodologia */
+
+
 
 /* Estilos para los primeros tres cards con fondo azul y texto blanco */
 .page-mikami .card-custom-azul {
@@ -436,31 +518,41 @@ header, body {
     color: #0a2652; /* Texto azul */
     border: 2px solid #0a2652; /* Bordes azules */
 }
-/* Estilos para los cards */
-.card-custom {
-    position: relative;
-    background-color: #0a2652; /* Fondo azul */
-    color: #efefef; /* Texto blanco */
-    border: 2px solid #0a2652; /* Bordes azules */
-    text-align: center; /* Centra el contenido */
-    padding: 1em; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    overflow: hidden; /* Asegura que los elementos no se salgan del card */
-}
 
-/* Estilo para la imagen dentro del card */
-.card-custom img {
-    max-width: 100%; /* Imagen se adapta al ancho del card */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-bottom: 1em; /* Espaciado debajo de la imagen */
-    border-radius: 10px; /* Opcional: Bordes redondeados */
-}
+    /* Mantiene el tamaño del card */
+    .card-custom {
+        min-height: 200px; /* Ajusta según necesidad */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
 
-/* Opcional: Estilo al pasar el mouse por el card */
-.card-custom:hover {
-    transform: scale(1.05); /* Efecto de zoom */
-    transition: transform 0.3s ease; /* Transición suave */
-}
+    /* Se asegura de centrar "MI" en la tarjeta */
+    .mi-text {
+        margin: 0;
+        position: absolute;
+    }
+
+    /* Oculta el contenido original por defecto */
+    .card-custom .hidden-content {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* En pantallas grandes (≥992px) se activa el hover */
+    @media (min-width: 992px) {
+        .card-custom:hover .mi-text {
+            display: none;
+        }
+
+        .card-custom:hover .hidden-content {
+            display: block;
+            opacity: 1;
+        }
+    }
 
 
 .page-mikami .navbar {
@@ -473,20 +565,24 @@ header, body {
 
 .page-mikami h2 {
     font-family: "Benzin-medium";
-    font-size: 3vh;
+    font-size: 4vh;
 }
 .page-mikami h5 {
     font-family: "Benzin-medium";
     font-size: 3vh;
 }
+.page-mikami h6 {
+    font-family: "Benzin-medium";
+    font-size: 6vh;
+}
 
 .page-mikami h4 {
-    font-size: 3vh;
+    font-size: 2.6vh;
     color: #0a2652;
 }
+
 .page-mikami .text-center a {
-    font-family: "RennerBold";
-    font-size: 3vh;
+    font-size: 4vh;
 }
 
 .button-center {
@@ -561,6 +657,29 @@ footer p {
     margin-bottom: 10px;
     font-size: 1.1em;
 }
+
+/* 🔹 Contenedor de iconos */
+.social-icons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 🔹 Estilos generales de los iconos */
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5rem; /* Tamaño del icono */
+    color: #898e7d; /* Mismo color apagado que el texto del footer */
+    opacity: 0.75; /* Misma opacidad que el texto */
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* 🔹 Efecto al hacer hover: color azul y opacidad completa */
+.social-icons a:hover {
+    color: #0a2652; /* Azul al hacer hover */
+    opacity: 1; /* Opacidad total en hover */
+}
+
 
 @media (max-width: 768px) {
     .iceberg-context {
