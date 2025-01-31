@@ -57,8 +57,8 @@ header, body {
 }
 
 .navbar {
-    position: fixed;
-    z-index: 1111;
+    position: fixed !important; 
+    z-index: 9999 !important;
     width: 100%;
 }
 
@@ -84,10 +84,9 @@ header, body {
     display: flex;
     justify-content: space-between;
     align-items: center;   
-    background: rgba(38, 91, 137, 0.2);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    border: 1.5px rgba(209, 213, 219, 0.3);
+    background: rgba(38, 91, 137, 0.2); /* Fondo semi-transparente */
+    -webkit-backdrop-filter: blur(10px); /* Desenfoque en Safari */
+    backdrop-filter: blur(10px); /* Desenfoque en otros navegadores */
     border-radius: 40px;
 }
 
@@ -108,7 +107,10 @@ header, body {
     left: 0;
     width: 100%;
     height: 0.08em;
-    background-color: #0a2652;
+    background: rgba(38, 91, 137, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px rgba(209, 213, 219, 0.3);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -130,53 +132,65 @@ header, body {
     font-size: 5vh;
 }
 
-/* 🔹 Menú hamburguesa en móviles */
 @media (max-width: 992px) {
-    /* Oculta el menú por defecto */
     #menuItems {
-        display: none;
+        display: flex; /* Mantiene la estructura */
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(38, 91, 137, 0.2);
-        -webkit-backdrop-filter: blur(5px);
-        padding: 1em;
-        z-index: 1112;
-        border-radius: 0 0 10px 10px;
+        background: #265B89; /* Fondo azul sólido */
+        padding: 1.5em;
+        z-index: 9999 !important;
+        border-radius: 0 0 20px 20px;
         text-align: center;
-    }
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    /* Muestra el menú cuando está activo */
-    #menuItems.active {
-        display: flex;
-    }
-
-    /* Mantiene las animaciones de los ítems */
-    .menu-items .nav-item {
         opacity: 0;
         transform: translateY(-10px);
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        pointer-events: none;
+        transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
     }
 
-    .menu-items.active .nav-item {
+    /* Cuando el menú está activo */
+    #menuItems.active {
         opacity: 1;
         transform: translateY(0);
+        pointer-events: all;
+    }
+
+    /* 🔹 Estilo del texto en blanco */
+    #menuItems a {
+        color: white !important;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        display: block;
+        transition: color 0.3s ease-in-out;
+    }
+
+    /* 🔹 Efecto hover */
+    #menuItems a:hover {
+        color: #ffcc00; /* Amarillo para resaltar */
+    }
+
+    /* 🔹 Ícono del menú hamburguesa */
+    #menuToggle {
+        display: inline-block;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* 🔹 Rotación del icono al abrir el menú */
+    #menuToggle.active {
+        transform: rotate(90deg);
     }
 }
 
-/* 🔹 Icono del menú hamburguesa */
-#menuToggle {
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
 
-/* 🔹 Rotación del icono al abrir el menú */
-#menuToggle.active {
-    transform: rotate(90deg);
-}
+
 
 
 
@@ -508,6 +522,10 @@ p.text-center a {
 
 .about-page main {
     padding-top: 100px; /* Ajusta según la altura de la navbar */
+}
+
+.page-mikami .navbar {
+    position: static !important;
 }
 
 /* 🔹 Modificación del botón sin perder la animación */
