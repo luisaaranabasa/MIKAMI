@@ -62,8 +62,12 @@ header, body {
     width: 100%;
 }
 
+
+
 .navbar-nav {
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .navbar-nav a {
@@ -87,9 +91,14 @@ header, body {
     border-radius: 40px;
 }
 
+#menuItems {
+    flex-grow: 1;
+    text-align: center;
+}
+
 .lista {
+    margin: 0 15px;
     position: relative;
-    display: inline-block;
 }
 
 .lista::after {
@@ -121,47 +130,55 @@ header, body {
     font-size: 5vh;
 }
 
-/* Estilos para menú responsive */
-@media (max-width: 768px) {
-    .navbar-nav {
-        display: none; /* Oculta los ítems del menú */
-    }
-
-    .menu-items {
+/* 🔹 Menú hamburguesa en móviles */
+@media (max-width: 992px) {
+    /* Oculta el menú por defecto */
+    #menuItems {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Debajo del menú principal */
+        top: 100%;
         left: 0;
         right: 0;
-        background-color: rgba(38, 91, 137, 0.9); /* Fondo oscuro */
+        background: rgba(38, 91, 137, 0.2);
+        -webkit-backdrop-filter: blur(5px);
         padding: 1em;
         z-index: 1112;
         border-radius: 0 0 10px 10px;
-    }
-
-    .menu-items.active {
-        display: flex; /* Muestra el menú desplegable */
-    }
-
-    .menu-items .nav-link {
-        color: white; /* Color de los enlaces en móvil */
-        padding: 0.5em 0;
         text-align: center;
-        text-decoration: none;
     }
 
-    .menu-items .nav-link:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Efecto hover */
-        border-radius: 5px;
+    /* Muestra el menú cuando está activo */
+    #menuItems.active {
+        display: flex;
     }
 
-    /* Oculta los ítems principales del menú y muestra el botón */
-    .menu img[alt="Comillas"] {
-        display: inline-block;
-        cursor: pointer;
+    /* Mantiene las animaciones de los ítems */
+    .menu-items .nav-item {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .menu-items.active .nav-item {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
+/* 🔹 Icono del menú hamburguesa */
+#menuToggle {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Rotación del icono al abrir el menú */
+#menuToggle.active {
+    transform: rotate(90deg);
+}
+
+
 
 /* SECCION INTRO */
 .seccion_intro {
