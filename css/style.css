@@ -847,10 +847,7 @@ footer p {
     opacity: 1; /* Opacidad total en hover */
 }
 
-.seccion_intro h1 {
-    font-size: 6vh;
-    font-weight: bold;
-}
+
 
 /* Aumentar el tamaño SOLO en dispositivos móviles */
 @media (max-width: 768px) {
