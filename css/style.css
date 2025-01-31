@@ -117,6 +117,9 @@ header, body {
 #principio_pag {
     z-index: 0;
 }
+#principio_pag h1 {
+    font-size: 5vh;
+}
 
 /* Estilos para menú responsive */
 @media (max-width: 768px) {
@@ -461,6 +464,18 @@ header, body {
     width: 100%;
 }
 
+
+p.text-center a {
+    font-size: 3vh; /* Tamaño normal en escritorio */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    p.text-center a {
+        font-size: 3vh !important; /* Reduce el tamaño en móviles */
+    }
+}
+
 @media (max-width: 768px) {
     p {
         font-size: 2.3vh !important; /* Ajusta este valor al mismo tamaño de otros <p> */
@@ -471,6 +486,8 @@ header, body {
         line-height: 1.5 !important;
     }
 }
+
+
 
 .about-page main {
     padding-top: 100px; /* Ajusta según la altura de la navbar */
