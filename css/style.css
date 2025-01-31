@@ -36,6 +36,8 @@ header, body {
     color: #0a2652;
 }
 
+
+
 /* Estilos generales existentes */
 .parallax {
     background-attachment: fixed;
@@ -457,6 +459,17 @@ header, body {
 
 .custom-paragraph {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 2.3vh !important; /* Ajusta este valor al mismo tamaño de otros <p> */
+        line-height: 1.5 !important;
+    }
+    h1 {
+        font-size: 3.2vh !important; /* Ajusta este valor al mismo tamaño de otros <p> */
+        line-height: 1.5 !important;
+    }
 }
 
 .about-page main {
