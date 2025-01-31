@@ -340,6 +340,19 @@ header, body {
     font-size: 2.2vh;
 }
 
+@media (max-width: 768px) {
+    /* Aumenta ligeramente el tamaño de "TODO EMPIEZA EN TI" en móviles */
+    .seccion_intro h1 {
+        font-size: 2.8rem; /* Ajusta el tamaño (prueba con 2.8rem si quieres más grande) */
+    }
+
+    /* Reduce ligeramente el tamaño de "DESCUBRE TU VERDADERA VOZ" en móviles */
+    .section_autentica h1 {
+        font-size: 2rem; /* Prueba con 1.8rem si aún quieres más pequeño */
+    }
+}
+
+
 /* SOBRE MI */
 .section_aboutme {
     position: relative;
