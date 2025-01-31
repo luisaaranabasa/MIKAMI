@@ -641,6 +641,43 @@ header, body {
         }
     }
 
+    @media (max-width: 1024px) {
+        /* 🔹 Para los cards de MIKAMI */
+        .card-custom .mi-text {
+            display: none !important; /* Oculta el h6 */
+        }
+    
+        .card-custom .hidden-content {
+            display: block !important;
+            opacity: 1 !important;
+            position: static;
+        }
+    
+        .card-custom {
+            height: auto; /* Ajusta tamaño automático */
+            padding: 20px;
+            text-align: center;
+        }
+    }
+    
+    /* 🔹 Mantener efecto hover solo en pantallas grandes */
+    @media (min-width: 1025px) {
+        .card-custom .hidden-content {
+            display: none;
+            opacity: 0;
+        }
+    
+        .card-custom:hover .mi-text {
+            display: none;
+        }
+    
+        .card-custom:hover .hidden-content {
+            display: block;
+            opacity: 1;
+        }
+    }
+    
+
 
 .page-mikami .navbar {
     position: static !important;  /* Elimina cualquier propiedad de posicionamiento fijo */
@@ -828,3 +865,40 @@ footer p {
         line-height: 1.5;
     }
 }
+
+@media (max-width: 1024px) {
+    .hover-card .mi-text-hover {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .hover-card .hidden-content-hover {
+        display: block !important;
+        opacity: 1 !important;
+        position: static;
+    }
+
+    .hover-card {
+        height: auto; /* Para que el contenido no se desborde */
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1025px) {
+    .hover-card .hidden-content-hover {
+        display: none;
+        opacity: 0;
+    }
+
+    .hover-card:hover .mi-text-hover {
+        display: none;
+    }
+
+    .hover-card:hover .hidden-content-hover {
+        display: block;
+        opacity: 1;
+    }
+}
+
