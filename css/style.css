@@ -57,10 +57,14 @@ header, body {
 }
 
 .navbar {
-    position: fixed !important; 
-    z-index: 9999 !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 9999 !important;
+    /* Mantén el fondo y el blur que ya tienes en .menu (si es que se aplica al contenedor) */
 }
+
 
 
 
@@ -291,7 +295,7 @@ header, body {
 /* SECCION AUTENTICA */
 .section_autentica {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .autentica {
@@ -392,7 +396,7 @@ header, body {
 /* SOBRE MI */
 .section_aboutme {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .aboutme {
@@ -524,10 +528,6 @@ p.text-center a {
     padding-top: 100px; /* Ajusta según la altura de la navbar */
 }
 
-.page-mikami .navbar {
-    position: static !important;
-}
-
 /* 🔹 Modificación del botón sin perder la animación */
 .btn-destacado {
     padding-top: 8px !important; /* Reduce el padding superior */
@@ -568,7 +568,7 @@ p.text-center a {
     padding: 20px;
     border: none;
     position: relative;
-    overflow: hidden; /* Evita que el contenido desborde */
+    /* overflow: hidden; Evita que el contenido desborde */
 }
 
 /* 🔹 Se asegura de centrar la palabra clave inicial */
@@ -989,6 +989,354 @@ footer p {
     .hover-card:hover .hidden-content-hover {
         display: block;
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajusta el footer para que sea un poco más ancho y tenga algo de padding interno */
+    footer {
+        width: 70%;            /* Ocupa el 90% del ancho de la pantalla */
+        margin: 3vh auto;       /* Se centra horizontalmente y tiene margen vertical */
+        padding: 0 10px;        /* Agrega un poco de espacio interno en los laterales */
+        position: relative;
+    }
+    
+    /* Organiza los elementos del menú en un grid de 2 columnas */
+    footer .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+        gap: 5px;                     /* Espaciado reducido entre filas y columnas */
+        margin: 0;                    /* Se quitan márgenes adicionales */
+        width: 100%;                  /* El grid ocupa todo el ancho del footer */
+    }
+    
+    /* Elimina márgenes o paddings extra en los LI */
+    footer .menu li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Alineación del texto según posición:
+       - Ítems 1 y 3 (Sobre mí y Servicios) a la izquierda.
+       - Ítems 2 y 4 (Home y Mikami) a la derecha.
+    */
+    footer .menu li:nth-child(1),
+    footer .menu li:nth-child(3) {
+        text-align: right;
+    }
+    footer .menu li:nth-child(2),
+    footer .menu li:nth-child(4) {
+        text-align: left;
+    }
+}
+
+/* ----- Sección de Servicios ----- */
+.servicios-section {
+    text-align: center;
+    padding-top: 100px; /* Espacio para que el navbar no tape */
+  }
+  
+.servicios-section h2 {
+    font-family: "Benzin-medium", sans-serif;
+    font-size: 6vh;
+    margin-bottom: 30px;
+}
+
+h2.solution  {
+    font-size: 3vh;
+}
+.servicios-section p {
+    font-size: 2.5vh;
+
+}
+
+h2.section-subtitle {
+    font-family: "RennerBold";
+    font-size: 3vh;
+}
+  
+  /* ----- Cards Principales (Estado colapsado) ----- */
+  .servicio-card .card {
+    height: 200px; /* Tamaño fijo */
+    background-color: #0a2652; /* Fondo azul */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* La cabecera se muestra siempre y se centra */
+  .servicio-card .card .card-header {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Título de la cabecera */
+  .servicio-card .card .card-header h5.card-title {
+    font-family: "Benzin-medium", sans-serif;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    font-size: 3vh;
+  }
+  
+  /* Ocultar el contenido extra hasta expandir */
+  .servicio-card .card .card-body {
+    display: none;
+  }
+  
+  /* ----- Estado Expandido ----- */
+  .servicio-card.expanded .card {
+    height: auto; /* Altura según contenido */
+    background-color: #efefef; /* Fondo blanco */
+    border: 2px solid #0a2652; /* Borde azul */
+    color: #0a2652; /* Texto en azul */
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Mostrar el contenido extra en el estado expandido */
+  .servicio-card.expanded .card .card-body {
+    display: block;
+    margin-top: 15px;
+  }
+  
+  /* ----- Hover (solo en estado colapsado) ----- */
+  .servicio-card:not(.expanded) .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  /* ----- Estilos para el contenido expandido ----- */
+  .program-title {
+    font-family: "Benzin-medium", sans-serif;
+    font-size: 4vh;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .section-subtitle {
+    font-family: "Benzin-medium", sans-serif;
+    font-size: 3vh;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Sub-cards "Ideal para:" */
+  .ideal-for-cards .ideal-card {
+    background-color: #0a2652;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .ideal-for-cards .ideal-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  
+  .que-trabajaremos-cards .que-card {
+    background-color: #265B89;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    height: 170px;           /* Altura fija para todos los cards */
+    overflow: hidden;        
+    display: flex;           /* Utilizamos flex para centrar el contenido */
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+  }
+  
+  .que-trabajaremos-cards .que-card img {
+    max-width: 100%;
+    max-height: 100px;       /* Opcional: limita la altura de la imagen para no romper la altura fija */
+    margin-bottom: 10px;
+  }
+  
+  .ideal-for-cards p,
+  .que-trabajaremos-cards p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+/* Estilos para la sección de Packs */
+.packs-section {
+    text-align: center;
+    padding-top: 1vh;
+  }
+
+  /* Estilos para los que cards (packs) */
+  .que-trabajaremos-cards .que-card,
+  .packs-section .que-card {
+    background-color: #265B89;  /* Puedes cambiar el color si lo deseas */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    /* Aquí usamos una altura fija para que sean del mismo tamaño */
+    height: 170px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Estilos para el contador */
+  .counter {
+    display: block;
+    font-size: 3rem;      /* Ajusta el tamaño de la fuente según necesites */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el párrafo debajo del contador */
+  .que-trabajaremos-cards p,
+  .packs-section p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .packs-section .que-card {
+    height: 120px;
+    background-color: #efefef;  /* Fondo (puedes cambiarlo si lo deseas) */
+    color: #265B89;             /* Color del texto */
+    padding: 10px;
+    border: 1px solid #265B89;  /* Borde azul */
+    border-radius: 5px;         /* Bordes redondeados */
+    margin-bottom: 15px;
+    text-align: center;
+    /* overflow: hidden;           Oculta el contenido que exceda la altura */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* Centra verticalmente el contenido */
+  }
+
+  .packs-section {
+    padding-top: 0 !important;  /* Anula el padding-top heredado de .py-5 */
+}
+
+.yours {
+    font-family: "RennerItalic";
+}
+
+/* Línea separadora solo visible en cards expandidos */
+.servicio-card:not(.expanded) .section-divider {
+    display: none;
+}
+
+.section-divider {
+    width: 80%;
+    margin: 30px auto; /* Espaciado superior e inferior */
+    border: none;
+    border-top: 2px solid #265B89; /* Línea azul */
+    opacity: 1;
+}
+
+/* 🔹 Estilos para la nueva sección */
+.contact-section {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* 🔹 Ajuste del botón compacto */
+.btn-destacado {
+    font-size: 1.8vh; /* Tamaño más pequeño */
+    padding: 0.5em 1.2em; /* Botón compacto */
+    background-color: #265B89;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* 🔹 Efecto hover más sutil */
+.btn-destacado:hover {
+    background-color: #0a2652;
+    padding: 0.4em 1em; /* Reduce ligeramente el padding para dar efecto visual sin cambiar el font-size */
+}
+
+/* 🔹 Asegura que el botón esté centrado */
+.button-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    /* 🔹 Aumenta la separación entre los tres cards principales */
+    .servicio-card {
+        margin-bottom: 30px !important; /* Mayor separación entre cards */
+    }
+
+    /* 🔹 Agrega margen a los lados para que no ocupen todo el ancho */
+    .servicios-section .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* 🔹 Ajusta el tamaño de los cards internos para que tengan el mismo tamaño */
+    .ideal-for-cards .ideal-card,
+    .que-trabajaremos-cards .que-card {
+        height: 180px !important; /* Misma altura */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden; /* Evita desbordamiento */
+    }
+
+    /* 🔹 Asegura que el texto no se desborde */
+    .ideal-for-cards p,
+    .que-trabajaremos-cards p {
+        font-size: 0.9rem !important; /* Reduce tamaño de texto si es necesario */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* 🔹 Ajusta los contenedores de imágenes para que sean del mismo tamaño */
+    .que-trabajaremos-cards .que-card img {
+        max-height: 80px !important; /* Ajusta la altura máxima */
+        object-fit: contain;
+    }
+
+    /* 🔹 Sección de Packs - uniformidad */
+    .packs-section .que-card {
+        height: 120px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 }
 

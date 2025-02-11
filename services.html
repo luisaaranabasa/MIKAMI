@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIKAMI - Servicios</title>
+  <link rel="icon" href="css/media/img/Simbolo_RGB_AZUL.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href="https://fonts.cdnfonts.com/css/renner" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="index-page">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar parallax navbar-expand-lg navMenu" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
+      <div class="container-fluid menu">
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand" href="index.html">
+          <img src="css/media/img/Wordmark_RGB__AZUL.png" alt="MikamiLogo" width="auto" height="50" />
+        </a>
+        <!-- Menú centrado -->
+        <div id="menuItems" class="collapse navbar-collapse justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item lista">
+              <a class="nav-link enlace" href="about.html">SOBRE MÍ</a>
+            </li>
+            <li class="nav-item lista">
+              <a class="nav-link menu_seccion_proyectos enlace" href="method.html">METODOLOGÍA</a>
+            </li>
+            <li class="nav-item lista">
+              <a class="nav-link enlace" href="services.html">SERVICIOS</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Ícono del menú hamburguesa (para móviles) -->
+        <a id="menuToggle" class="d-lg-block d-flex">
+          <img src="css/media/img/Simbolo_RGB_AZUL.png" alt="Comillas" width="auto" height="50" />
+        </a>
+      </div>
+    </nav>
+    <!-- Un placeholder para reservar el espacio del navbar -->
+    <div class="navbar-placeholder" style="height:60px;"></div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="servicios-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">SERVICIOS</h2>
+        <h2 class="solution text-center">SOLUCIONES PARA CADA NECESIDAD</h2>
+        <div class="row" id="serviciosRow">
+          <!-- Card 1: PROFESIONALES Y EMPRESAS -->
+          <div class="col-md-4 servicio-card" data-card="1">
+            <div class="card" onclick="expandCard('1')">
+              <div class="card-header">
+                <h5 class="card-title">PROFESIONALES Y EMPRESAS</h5>
+              </div>
+              <div class="card-body">
+                <!-- Este contenido se muestra al expandir, pero la cabecera siempre permanece -->
+                <h1 class="program-title">PROGRAMA DE COMUNICACION DE ALTO IMPACTO</h1>
+                <p>
+                  Rompe barreras y lleva tu comunicación profesional al siguiente nivel con un programa estratégico y personalizado. Diseñado para líderes y equipos que buscan no solo perfeccionar su mensaje, sino también transformar la manera en que escuchan, dialogan y generan impacto.
+                </p>
+                <h2 class="section-subtitle">IDEAL PARA:</h2>
+                <div class="row ideal-for-cards">
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">1</div>
+                      <p>Líderes y ejecutivos que necesitan comunicar ideas con claridad y confianza.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">2</div>
+                      <p>Profesionales que desean aumentar su influencia en entornos dinámicos y competitivos.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">3</div>
+                      <p>Equipos y empresas que buscan fortalecer la comunicación interna y externa de manera sostenible.</p>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="section-subtitle">QUÉ TRABAJAREMOS:</h2>
+                <div class="row que-trabajaremos-cards">
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/escucha.png" alt="Escucha activa" class="img-fluid">
+                      <p>Escucha activa y feedback efectivo</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/storytelling.png" alt="Storytelling" class="img-fluid">
+                      <p>Técnicas avanzadas de storytelling: mensajes claros, estratégicos y que conectan</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/estrategias.png" alt="Estrategia" class="img-fluid">
+                      <p>Estrategias para adaptar el discurso a diferentes contextos y audiencias</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row que-trabajaremos-cards">
+                  <div class="col-md-6">
+                    <div class="que-card">
+                      <img src="css/media/img/negociacion.png" alt="Negociación" class="img-fluid">
+                      <p>Técnicas de comunicación para una negociación ganadora</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="que-card">
+                      <img src="css/media/img/perfeccionismo.png" alt="Perfeccionamiento" class="img-fluid">
+                      <p>Perfeccionamiento continuo del lenguaje verbal y no verbal</p>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                    Este programa no solo refuerza tus habilidades comunicativas, sino que te prepara para liderar con empatía, claridad y propósito en cualquier entorno.
+                </p>
+              </div> <!-- /.card-body -->
+              <hr class="section-divider">
+              <div class="card-body">
+                <!-- Este contenido se muestra al expandir, pero la cabecera siempre permanece -->
+                <h1 class="program-title">WORKSHOP DE COMUNICACIÓN</h1>
+                <h2 class="solution text-center">INDIVIDUAL/GRUPO</h2>
+                <p>
+                    Una inmersión intensiva diseñada para lograr resultados rápidos y efectivos. Este taller práctico te proporcionará herramientas clave para destacar en cualquier entorno profesional, ya sea en presentaciones, reuniones importantes o desafíos inmediatos de comunicación.                </p>
+                <h2 class="section-subtitle">IDEAL PARA:</h2>
+                <div class="row ideal-for-cards">
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">1</div>
+                      <p>Preparar presentaciones clave o reuniones decisivas.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">2</div>
+                      <p>
+                        Mejorar habilidades de comunicación en entornos individuales o grupales.                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">3</div>
+                      <p>
+                        Superar desafíos específicos en tu comunicación profesional.                    </p>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="section-subtitle">QUÉ TRABAJAREMOS:</h2>
+                <p>Este workshop se adapta a tus necesidades inmediatas y se enfoca en áreas clave como:</p>
+                <div class="row que-trabajaremos-cards">
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/confianza2.png" alt="Escucha activa" class="img-fluid">
+                      <p>Técnicas para gestionar los nervios y hablar con confianza.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/claros.png" alt="Storytelling" class="img-fluid">
+                      <p>Mensajes claros y que generen impacto.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/seguridad.png" alt="Estrategia" class="img-fluid">
+                      <p>Perfeccionamiento del lenguaje corporal para proyectar seguridad y liderazgo.</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="yours">Tu comunicación, elevada al siguiente nivel.</p>
+                <p>Este workshop está diseñado para transformar tus habilidades de manera rápida y efectiva, ayudándote a ganar mayor seguridad al comunicarte, proyectar confianza, mejorar la interacción en equipo y ver resultados tangibles desde el primer momento. Con un enfoque práctico y feedback personalizado, conectarás mejor, liderarás con impacto y superarás cualquier reto profesional.</p>
+              </div> <!-- /.card-body -->
+              <hr class="section-divider">
+              <div class="card-body">
+                <!-- Este contenido se muestra al expandir, pero la cabecera siempre permanece -->
+                <h1 class="program-title">FLEXIMENTOR</h1>
+                <p>
+                    ¿Tienes una necesidad específica en comunicación? FlexiMentor es el programa diseñado para profesionales consolidados que buscan potenciar su influencia, transformar su impacto y alcanzar sus metas a través de una mejor comunicación.</p>
+                <h2 class="section-subtitle">IDEAL PARA:</h2>
+                <div class="row ideal-for-cards">
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">1</div>
+                      <p>Profesionales que necesitan un enfoque flexible y personalizado.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">2</div>
+                      <p>
+                        Ejecutivos que buscan perfeccionar aspectos específicos de su comunicación en su propio horario.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">3</div>
+                      <p>
+                        Líderes que entienden el poder de la comunicación para transformar y alcanzar objetivos estratégicos.               </p>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="section-subtitle">QUÉ INCLUYE:</h2>
+                <p>FlexiMentor te permite personalizar tu proceso de aprendizaje, eligiendo el número de sesiones según tus necesidades. Cada sesión está enfocada en resultados específicos para maximizar tu tiempo y desarrollo.</p>
+                <section class="packs-section py-5">
+                    <div class="container">
+                      <h2 class="section-subtitle">PACKS</h2>
+                      <div class="row">
+                        <!-- Pack 1 -->
+                        <div class="col-md-4">
+                          <div class="que-card">
+                            <span class="counter" data-target="20">0</span>
+                            <p>SESIONES</p>
+                          </div>
+                        </div>
+                        <!-- Pack 2 -->
+                        <div class="col-md-4">
+                          <div class="que-card">
+                            <span class="counter" data-target="10">0</span>
+                            <p>SESIONES</p>
+                          </div>
+                        </div>
+                        <!-- Pack 3 -->
+                        <div class="col-md-4">
+                          <div class="que-card">
+                            <span class="counter" data-target="5">0</span>
+                            <p>SESIONES</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="yours">Tu tiempo, tu progreso.</p>
+                    <p>Con FlexiMentor, puedes llevar tu comunicación profesional al siguiente nivel en un formato que se adapta completamente a ti y a tus metas. ¿Empezamos?</p>
+                </section>                  
+              </div> <!-- /.card-body -->
+            </div> <!-- /.card -->
+          </div> <!-- /.servicio-card -->
+
+          <!-- Card 2: JÓVENES PROFESIONALES -->
+          <div class="col-md-4 servicio-card" data-card="2">
+            <div class="card" onclick="expandCard('2')">
+              <div class="card-header">
+                <h5 class="card-title">JÓVENES PROFESIONALES</h5>
+              </div>
+              <div class="card-body">
+                <!-- Este contenido se muestra al expandir, pero la cabecera siempre permanece -->
+                <h1 class="program-title">PROGRAMA DE COMUNICACION PROFESIONAL</h1>
+                <p>
+                    Domina las habilidades esenciales para sobresalir en entrevistas, eventos de networking y presentaciones. Este programa está diseñado para jóvenes profesionales que buscan posicionarse como seguros, competentes y preparados para destacar en un entorno laboral competitivo.
+                </p>
+                <h2 class="section-subtitle">IDEAL PARA:</h2>
+                <div class="row ideal-for-cards">
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">1</div>
+                      <p>Jóvenes profesionales que quieren diferenciarse en procesos de selección.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">2</div>
+                      <p>Recién graduados que desean construir una marca profesional sólida.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">3</div>
+                      <p>Personas que buscan mejorar su impacto y confianza en entornos laborales.
+                    </p>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="section-subtitle">QUÉ TRABAJAREMOS:</h2>
+                <div class="row que-trabajaremos-cards">
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/entrevista.png" alt="Escucha activa" class="img-fluid">
+                      <p>Preparación para entrevistas exitosas</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/networking.png" alt="Storytelling" class="img-fluid">
+                      <p>Networking efectivo</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/interpersonal.png" alt="Estrategia" class="img-fluid">
+                      <p>Comunicación interpersonal efectiva</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row que-trabajaremos-cards">
+                  <div class="col-md-6">
+                    <div class="que-card">
+                      <img src="css/media/img/presentaciones.png" alt="Negociación" class="img-fluid">
+                      <p>Estructuración de presentaciones profesionales y persuasivas</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="yours">Tu comunicación, elevada al siguiente nivel.</p>
+                <p>Este workshop está diseñado para transformar tus habilidades de manera rápida y efectiva, ayudándote a ganar mayor seguridad al comunicarte, proyectar confianza, mejorar la interacción en equipo y ver resultados tangibles desde el primer momento. Con un enfoque práctico y feedback personalizado, conectarás mejor, liderarás con impacto y superarás cualquier reto profesional.</p>
+              </div> <!-- /.card-body -->
+              <hr class="section-divider">
+              <div class="card-body">
+                <!-- Este contenido se muestra al expandir, pero la cabecera siempre permanece -->
+                <h1 class="program-title">BOOTCAMP DE EXPRESIÓN Y AUTOCONFIANZA</h1>
+                <p>
+                    Fortalece tu confianza y aprende a proyectar seguridad en cualquier escenario con herramientas prácticas y efectivas. Este programa está diseñado para ayudarte a superar bloqueos, mejorar tu expresión y comunicarte con naturalidad en situaciones cotidianas y profesionales.</p>
+                <h2 class="section-subtitle">IDEAL PARA:</h2>
+                <div class="row ideal-for-cards">
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">1</div>
+                      <p>Jóvenes que quieren sentirse más seguros al comunicarse en su día a día.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">2</div>
+                      <p>
+                        Profesionales que buscan soltura en su comunicación, tanto informal como profesional.                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">3</div>
+                      <p class="yours">Personas que enfrentan bloqueos al expresarse en público o en reuniones.</p>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="section-subtitle">QUÉ TRABAJAREMOS:</h2>
+                <p>Este workshop se adapta a tus necesidades inmediatas y se enfoca en áreas clave como:</p>
+                <div class="row que-trabajaremos-cards">
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/nervios.png" alt="Escucha activa" class="img-fluid">
+                      <p>Técnicas para aprender a gestionar los nervios y emociones</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/noverbal.png" alt="Storytelling" class="img-fluid">
+                      <p>Ejercicios prácticos para mejorar la expresión verbal y no verbal</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="que-card">
+                      <img src="css/media/img/estrategia2.png" alt="Estrategia" class="img-fluid">
+                      <p>Construcción de mensajes claros y efectivos para diferentes contextos</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="yours">Comunica con confianza y naturalidad.</p>
+                <p>En este bootcamp, reducirás el estrés al comunicarte, ganarás mayor seguridad y desarrollarás habilidades prácticas que podrás aplicar en cualquier entorno, con un enfoque totalmente personalizado para adaptarse a tus necesidades.</p>
+              </div> <!-- /.card-body -->
+              <hr class="section-divider">
+              <div class="card-body">
+                <!-- Este contenido se muestra al expandir, pero la cabecera siempre permanece -->
+                <h1 class="program-title">FIRSTSTEP MENTOR</h1>
+                <p>
+                    Un programa diseñado para jóvenes y adolescentes que buscan comunicar con seguridad y claridad. A través de sesiones personalizadas, trabajaremos juntos en los aspectos clave que te ayudarán a descubrir tu potencial, tomar decisiones estratégicas y ampliar tus perspectivas de futuro.</p>
+                <h2 class="section-subtitle">IDEAL PARA:</h2>
+                <div class="row ideal-for-cards">
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">1</div>
+                      <p>Estudiantes o recién graduados que necesitan orientación clara para sus primeros pasos profesionales o académicos.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">2</div>
+                      <p>
+                        Jóvenes que quieren reforzar su confianza al expresarse en entrevistas, eventos o entornos escolares y laborales.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="ideal-card">
+                      <div class="ideal-number">3</div>
+                      <p>
+                        Adolescentes interesados en construir una base sólida para su desarrollo personal y futuro profesional.</p>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="section-subtitle">QUÉ INCLUYE:</h2>
+                <p>FFirstStep Mentor te permite elegir el número de sesiones según tus necesidades. Cada encuentro se adapta para abordar tus retos más importantes:
+                </p>
+                <section class="packs-section py-5">
+                    <div class="container">
+                      <h2 class="section-subtitle">PACKS</h2>
+                      <div class="row">
+                        <!-- Pack 1 -->
+                        <div class="col-md-4">
+                          <div class="que-card">
+                            <span class="counter" data-target="20">0</span>
+                            <p>SESIONES</p>
+                          </div>
+                        </div>
+                        <!-- Pack 2 -->
+                        <div class="col-md-4">
+                          <div class="que-card">
+                            <span class="counter" data-target="10">0</span>
+                            <p>SESIONES</p>
+                          </div>
+                        </div>
+                        <!-- Pack 3 -->
+                        <div class="col-md-4">
+                          <div class="que-card">
+                            <span class="counter" data-target="5">0</span>
+                            <p>SESIONES</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="yours">Haz que tu primer paso cuente.</p>
+                    <p>Con FirstStep Mentor, descubrirás tu potencial, fortalecerás tu confianza y construirás una base sólida para afrontar cualquier desafío.</p>
+                </section>                  
+              </div> <!-- /.card-body -->
+            </div>
+          </div>
+
+          <!-- Card 3: MENTORÍA EXPRESS DE COMUNICACIÓN -->
+          <div class="col-md-4 servicio-card" data-card="3">
+            <div class="card" onclick="expandCard('3')">
+              <div class="card-header">
+                <h5 class="card-title">MENTORÍA EXPRESS DE COMUNICACIÓN</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-body">
+                    <!-- Este contenido se muestra al expandir, pero la cabecera siempre permanece -->
+                    <h1 class="program-title">PROGRAMA DE COMUNICACION PROFESIONAL</h1>
+                    <p>
+                        Avanza con confianza y eficacia en solo 90 minutos. La Mentoría Express de Comunicación está diseñada para ayudarte a superar un desafío puntual que esté frenando tu progreso, brindándote estrategias personalizadas y herramientas prácticas que podrás aplicar de inmediato.
+                    </p>
+                    <h2 class="section-subtitle">IDEAL PARA:</h2>
+                    <div class="row ideal-for-cards">
+                      <div class="col-md-4">
+                        <div class="ideal-card">
+                          <div class="ideal-number">1</div>
+                          <p>Profesionales que necesitan resolver un reto puntual de comunicación.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="ideal-card">
+                          <div class="ideal-number">2</div>
+                          <p>Personas con agendas ajustadas que buscan soluciones rápidas y efectivas.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="ideal-card">
+                          <div class="ideal-number">3</div>
+                          <p>Quienes deben preparar presentaciones, entrevistas o reuniones clave en poco tiempo.
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                    <h2 class="section-subtitle">QUÉ TRABAJAREMOS:</h2>
+                    <div class="row que-trabajaremos-cards">
+                      <div class="col-md-4">
+                        <div class="que-card">
+                          <img src="css/media/img/barrera.png" alt="Escucha activa" class="img-fluid">
+                          <p>Identificar y analizar tu barrera comunicativa</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="que-card">
+                          <img src="css/media/img/person.png" alt="Storytelling" class="img-fluid">
+                          <p>Diseñar estrategias personalizadas</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="que-card">
+                          <img src="css/media/img/efectivas.png" alt="Estrategia" class="img-fluid">
+                          <p>Poner en práctica herramientas efectivas</p>
+                        </div>
+                      </div>
+                    </div>
+                        <p class="yours">Resultados inmediatos, soluciones prácticas.</p>
+                        <p>En una sola sesión, obtendrás respuestas concretas para avanzar en tus habilidades comunicativas. Resolverás los bloqueos que te impiden brillar, ya sea en lo profesional o personal, y saldrás con las herramientas necesarias para enfrentar tus retos con seguridad y éxito.</p>
+                    </section>                  
+                  </div> <!-- /.card-body -->
+              </div>
+            </div>
+          </div>
+        </div> <!-- /#serviciosRow -->
+        <div id="collapseBtnContainer" class="text-center mt-3" style="display: none;">
+          <button class="btn btn-secondary" onclick="collapseCards()">X</button>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section">
+        <div class="container">
+            <!-- <h1 class="program-title text-center">¿HABLAMOS?</h1> -->
+            <p class="text-center"> La comunicación es poder. Hazla tuya.</p>
+            <div class="button-center mt-4">
+                <a href="mailto:mikami.mentoring@gmail.com" class="btn btn-transform btn-destacado">
+                    ¿HABLAMOS?
+                </a>
+            </div>
+        </div>
+    </section>    
+  </main>
+
+  <footer id="footer">
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Conóceme</a></li>
+      <li><a href="method.html">Mikami</a></li>
+      <li><a href="services.html">Servicios</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/mikami.mentoring/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/miriamcami"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:mikami.mentoring@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>&copy; 2024 Copyright | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
