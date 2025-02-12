@@ -1340,3 +1340,9 @@ h2.section-subtitle {
     }
 }
 
+#collapseBtnContainer .btn {
+    margin-top: -60px; /* Reduce el margen superior */
+    padding: 2px 8px; /* Ajusta el tamaño del botón */
+    font-size: 1.2rem; /* Ajusta el tamaño de la "X" */
+}
+
