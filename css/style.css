@@ -1399,6 +1399,6 @@ svg {
 
 @media (max-width: 768px) {
     .servicio-card .card .card-header h5.card-title {
-        font-size: 3h !important; /* Tamaño reducido para móviles */
+        font-size: 2.8h !important; /* Tamaño reducido para móviles */
     }
 }
