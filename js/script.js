@@ -106,3 +106,39 @@ document.addEventListener("DOMContentLoaded", function () {
       closeButton.addEventListener("click", collapseCards);
   }
 });
+
+const translations = {
+    "es": {
+        "about": "SOBRE MÍ",
+        "method": "METODOLOGÍA",
+        "services": "SERVICIOS",
+        "intro-title": "TODO EMPIEZA EN TI",
+        "intro-subtitle": "Comunica para conectar, influir y liderar.",
+        "discover-title": "DESCUBRE TU VERDADERA VOZ",
+        "discover-subtitle": "COMUNICA CON PROPÓSITO",
+        "discover-text": "Transforma tu manera de comunicar y conecta con los demás desde tu esencia...",
+        "start-now": "EMPIEZA AHORA"
+    },
+    "en": {
+        "about": "ABOUT ME",
+        "method": "METHODOLOGY",
+        "services": "SERVICES",
+        "intro-title": "EVERYTHING STARTS WITH YOU",
+        "intro-subtitle": "Communicate to connect, influence, and lead.",
+        "discover-title": "DISCOVER YOUR TRUE VOICE",
+        "discover-subtitle": "COMMUNICATE WITH PURPOSE",
+        "discover-text": "Transform the way you communicate and connect with others from your essence...",
+        "start-now": "START NOW"
+    }
+};
+
+let currentLang = "es";
+
+document.getElementById("lang-toggle").addEventListener("click", function () {
+    currentLang = currentLang === "es" ? "en" : "es";
+    this.textContent = currentLang === "es" ? "EN" : "ES";
+    document.documentElement.lang = currentLang;
+    document.querySelectorAll("[data-translate]").forEach(el => {
+        el.textContent = translations[currentLang][el.dataset.translate];
+    });
+});
